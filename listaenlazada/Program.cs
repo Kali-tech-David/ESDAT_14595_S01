@@ -22,4 +22,5 @@ b.AgregaIni(3);
 b.AgregaIni(10);
 b.AgregaFin(1);
 b.Imprime();
+b.Buscar(10);
 

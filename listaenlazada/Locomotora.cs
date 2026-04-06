@@ -41,8 +41,21 @@ namespace listaenlazada{
             while (tmp != null){
                 Console.WriteLine($"{tmp.Dato}, ");
                 tmp = tmp.Sig;
+            }   
+        }
+
+        public void Buscar(int valor)
+        {
+            Vagon actual = Primero;
+            while(actual != null)
+            {
+                if(actual.Dato == valor)
+                {
+                    Console.WriteLine("Dato encontrado");
+                    return;
+                }
+                actual = actual.Sig;
             }
-            
         }
     }
 }
