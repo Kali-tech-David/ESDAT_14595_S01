@@ -57,5 +57,15 @@ namespace listaenlazada{
                 actual = actual.Sig;
             }
         }
+
+        public void EliminarSegundo()
+        {
+            Vagon actual = Primero;
+            Vagon conservar = Primero.Sig.Sig;
+
+            actual.Sig = conservar;
+
+            Primero = actual;
+        }
     }
 }
