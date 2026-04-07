@@ -9,7 +9,7 @@ namespace listaenlazada{
         private Vagon Primero {  get; set; }
         
         public void AgregaIni(int valor) {
-            //agregar un dato al inicio
+
             Vagon nuevo = new Vagon(valor);
             if (this.Primero == null) {
                 this.Primero = nuevo;
@@ -21,7 +21,7 @@ namespace listaenlazada{
         }
 
         public void AgregaFin(int valor) {
-            //agregar un dato al inicio
+
             Vagon nuevo = new Vagon(valor);
             if (this.Primero == null) {
                 this.Primero = nuevo;
@@ -61,11 +61,19 @@ namespace listaenlazada{
         public void EliminarSegundo()
         {
             Vagon actual = Primero;
-            Vagon conservar = Primero.Sig.Sig;
 
-            actual.Sig = conservar;
-
-            Primero = actual;
+            if (actual == null || actual.Sig == null)
+            {
+                Console.WriteLine("Los vagones son insuficientes.");
+                return;
+            }
+            else
+            {
+                Vagon conservar = Primero.Sig.Sig;
+                actual.Sig = conservar;
+                Primero = actual;
+            }
+             
         }
     }
 }
