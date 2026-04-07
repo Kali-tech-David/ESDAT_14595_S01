@@ -104,5 +104,32 @@ namespace listaenlazada{
             }
             return contar;
         }
+
+        public Locomotora MezclarAlFinal(Locomotora listFin)
+        {
+            int valor = listFin.Lenght();
+            Vagon actual = Primero;
+            Vagon colocar = listFin.Primero;
+
+            while (actual.Sig != null)
+            {
+                actual = actual.Sig;
+            }
+            actual.Sig = colocar;
+
+            Locomotora resultado = new Locomotora();
+            resultado.Primero = Primero;
+
+            return resultado;
+        }
+
+        public void MezclaralFIN(Locomotora listFin)
+        {
+            int cant = listFin.Lenght();
+            for(int i = 0; i < cant; i++)
+            {
+                this.AgregaFin(listFin.Get(i));
+            }
+        }
     }
 }

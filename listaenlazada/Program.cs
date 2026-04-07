@@ -6,14 +6,12 @@ namespace LocomotoraVagones
         public static void Main(string[] args)
         {
             Console.WriteLine();
-            Locomotora b = new Locomotora();
+            Locomotora a = new Locomotora();
 
-            b.AgregaIni(7);
-            b.AgregaIni(5);
-            b.AgregaIni(3);
-            b.AgregaIni(1);
-            b.AgregaFin(10);
-            b.Imprime();
+            a.AgregaIni(5);
+            a.AgregaIni(3);
+            a.AgregaIni(1);
+            //a.Imprime();
 
             //b.EliminarSegundo();
             //b.Imprime();
@@ -24,9 +22,18 @@ namespace LocomotoraVagones
             //int valor = int.Parse(Console.ReadLine());
             //bool Encontrado = b.Buscar(valor);
             //Console.WriteLine(Encontrado ? "Valor encontrado." : "Valor no encontrado.");
+            Locomotora b = new Locomotora();
+            b.AgregaFin(2);
+            b.AgregaFin(4);
+            b.AgregaFin(6);
 
-            //Console.WriteLine(b.Get(0));
-            Console.WriteLine($"Hay {b.Lenght()} elementos.");
+            a.MezclarAlFinal(b);
+            //a.MezclaralFIN(b);
+            a.Imprime();
+            //b.Imprime();
+
+
+            //Console.WriteLine($"Hay {b.Lenght()} elementos.");
         }
     }
 }
