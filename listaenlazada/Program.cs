@@ -15,17 +15,18 @@ namespace LocomotoraVagones
             b.AgregaFin(10);
             b.Imprime();
 
-            Console.Write("\nIndique un valor a buscar: ");
-            int valor = int.Parse(Console.ReadLine());
-            bool Encontrado = b.Buscar(valor);
-            if (Encontrado)
-                Console.WriteLine("Valor encontrado.");
-            else
-                Console.WriteLine("Valor no encontrado.");
-            b.EliminarSegundo();
-            b.Imprime();
-            b.EliminarSegundo();
-            b.Imprime();
+            //b.EliminarSegundo();
+            //b.Imprime();
+            //b.EliminarSegundo();
+            //b.Imprime();
+
+            //Console.Write("\nIndique un valor a buscar: ");
+            //int valor = int.Parse(Console.ReadLine());
+            //bool Encontrado = b.Buscar(valor);
+            //Console.WriteLine(Encontrado ? "Valor encontrado." : "Valor no encontrado.");
+
+            //Console.WriteLine(b.Get(0));
+            Console.WriteLine($"Hay {b.Lenght()} elementos.");
         }
     }
 }

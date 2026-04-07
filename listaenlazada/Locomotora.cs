@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,6 +75,34 @@ namespace listaenlazada{
                 Primero = actual;
             }
              
+        }
+
+        public int Get(int idx)
+        {
+            Vagon actual = Primero;
+            int indice = 0;
+            while (actual != null)
+            {
+                if (indice == idx)
+                {
+                    return actual.Dato; ;
+                }
+                indice++;
+                actual = actual.Sig;
+            }
+            return int.MinValue;
+        }
+
+        public int Lenght()
+        {
+            Vagon actual = Primero;
+            int contar = 0;
+            while (actual != null)
+            {
+                contar++;
+                actual = actual.Sig;
+            }
+            return contar;
         }
     }
 }
