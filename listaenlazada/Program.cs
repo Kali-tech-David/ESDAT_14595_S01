@@ -7,20 +7,25 @@ namespace LocomotoraVagones
         {
             Console.WriteLine();
             Locomotora b = new Locomotora();
-            //Console.Write("Ingrese un valor: ");
-            //int valor1 = int.Parse(Console.ReadLine());
-            //b.AgregaIni(valor1);
 
-            //Console.Write("\nIngrese un valor: ");
-            //int valor2 = int.Parse(Console.ReadLine());
-            //b.AgregaIni(valor2);
-            //b.AgregaIni(10);
-            //b.AgregaFin(1);
-            //b.Imprime();
+            b.AgregaIni(7);
+            b.AgregaIni(5);
+            b.AgregaIni(3);
+            b.AgregaIni(1);
+            b.AgregaFin(10);
+            b.Imprime();
+
+            Console.Write("\nIndique un valor a buscar: ");
+            int valor = int.Parse(Console.ReadLine());
+            bool Encontrado = b.Buscar(valor);
+            if (Encontrado)
+                Console.WriteLine("Valor encontrado.");
+            else
+                Console.WriteLine("Valor no encontrado.");
             b.EliminarSegundo();
             b.Imprime();
-            //    b.EliminarSegundo();
-            //    b.Imprime();
+            b.EliminarSegundo();
+            b.Imprime();
         }
     }
 }

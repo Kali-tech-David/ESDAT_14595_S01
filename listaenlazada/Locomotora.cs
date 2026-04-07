@@ -44,18 +44,18 @@ namespace listaenlazada{
             }   
         }
 
-        public void Buscar(int valor)
+        public bool Buscar(int valor)
         {
             Vagon actual = Primero;
             while(actual != null)
             {
                 if(actual.Dato == valor)
                 {
-                    Console.WriteLine("Dato encontrado");
-                    return;
+                    return true;
                 }
                 actual = actual.Sig;
             }
+            return false;
         }
 
         public void EliminarSegundo()
